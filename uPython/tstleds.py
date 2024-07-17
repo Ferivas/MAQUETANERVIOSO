@@ -1,7 +1,7 @@
 import time
 import machine, neopixel
 #n=120
-NUMPIX=30  #NUMERO DE PIXELS
+NUMPIX=31  #NUMERO DE PIXELS
 DATA=13  #PIN UTILIZADO EN EL ESP32
 np = neopixel.NeoPixel(machine.Pin(DATA), NUMPIX)
 def demo(np):
@@ -67,7 +67,7 @@ def demo(np):
                 val = i & 0xff
             else:
                 val = 255 - (i & 0xff)
-            np[j] = (0, val, 0)yu+-
+            np[j] = (0, val, 0)
             
         np.write()
         
